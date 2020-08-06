@@ -1,4 +1,4 @@
-# coveralls-gradle-plugin v2.10.1
+# coveralls-gradle-plugin
 
 [![Build Status](https://travis-ci.org/kt3k/coveralls-gradle-plugin.svg?branch=master)](https://travis-ci.org/kt3k/coveralls-gradle-plugin) [![Coverage Status](https://coveralls.io/repos/kt3k/coveralls-gradle-plugin/badge.svg)](https://coveralls.io/r/kt3k/coveralls-gradle-plugin)
 
@@ -13,7 +13,7 @@ Add the following lines to build.gradle:
 ```groovy
 plugins {
     id 'net.saliman.cobertura' version '2.3.1'
-    id 'com.github.kt3k.coveralls' version '2.10.1'
+    id 'com.github.kt3k.coveralls' version '2020.1'
 }
 
 cobertura.coverageFormats = ['html', 'xml'] // coveralls plugin depends on xml format report
@@ -46,7 +46,7 @@ Add the following lines to build.gradle:
 ```groovy
 plugins {
     id 'jacoco'
-    id 'com.github.kt3k.coveralls' version '2.8.4'
+    id 'com.github.kt3k.coveralls' version '2020.1'
 }
 
 jacocoTestReport {
@@ -83,7 +83,7 @@ Add the following lines to build.gradle:
 ```groovy
 plugins {
     id "info.solidsoft.pitest" version '1.1.11'
-    id 'com.github.kt3k.coveralls' version '2.8.4'
+    id 'com.github.kt3k.coveralls' version '2020.1'
 }
 
 pitest {
