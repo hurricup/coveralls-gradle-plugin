@@ -7,6 +7,7 @@ import org.apache.http.entity.mime.MultipartEntityBuilder
 import org.gradle.api.DefaultTask
 import org.gradle.api.logging.Logger
 import org.gradle.api.logging.Logging
+import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.TaskAction
 import org.kt3k.gradle.plugin.CoverallsPluginExtension
 import org.kt3k.gradle.plugin.coveralls.domain.*
@@ -19,14 +20,16 @@ import static groovyx.net.http.Method.POST
 class CoverallsTask extends DefaultTask {
 
 	/** environmental variable */
+	@Internal
 	Map<String, String> env = [:]
 
 	/** the logger */
+	@Internal
 	Logger logger = Logging.getLogger('coveralls-logger')
 
 	/** source report factory mapping */
+	@Internal
 	Map<String, SourceReportFactory> sourceReportFactoryMap = [:]
-
 
 	/**
 	 * Posts JSON string to the url (as a multipart HTTP POST).
